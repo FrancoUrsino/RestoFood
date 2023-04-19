@@ -25,7 +25,7 @@
   </div>
   
   <!-- HEADER -->
-  <div class="header" data-header>
+  <header class="header" data-header>
     <div class="header__container">
       <a href="#" class="logo"><img src="images/logo.svg" alt="Grilli logo" width="160" height="50"></a>
       <nav class="nav" data-navbar>
@@ -62,8 +62,59 @@
       </button>
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
-  </div>
-
+  </header>
+  <!-- MAIN -->
+  <main class="main">
+    <section class="hero text_center" aria-label="home" id="home">
+      <ul class="hero__slider" data-hero-slider>
+        <!-- slider 1 -->
+        <li class="hero__slider--item active" data-hero-slider-item>
+          <div class="slider-bg">
+            <img class="slider-bg-img" src="images/hero-slider-1.jpg" width="1880" height="950" alt="">
+          </div>
+          <p class="label-2 hero__slider--item--subtitle slider__reveal">Comída Tradicional</p>
+          <h1 class="display-1 hero__slider--item--title slider__reveal">Por el amor a la cocina</h1>
+          <p class="body-2 hero__slider--item--text slider__reveal">Ven a disfrutar con amigos y familia</p>
+          <a href="#" class="hero__btn btn__secondary slider__reveal">
+            <span class="text text-1">ver menu</span>
+            <span class="text text-2" aria-hidden="true">ver menu</span>
+          </a>
+        </li>
+        <!-- slider 2 -->
+        <li class="hero__slider--item active" data-hero-slider-item>
+          <div class="slider-bg">
+            <img class="slider-bg-img" src="images/hero-slider-2.jpg" alt="" width="1880" height="950">
+          </div>
+          <p class="label-2 hero__slider--item--subtitle slider__reveal">Experiencias unicas</p>
+          <h1 class="display-1 hero__slider--item--title slider__reveal">Historia para contar</h1>
+          <p class="body-2 hero__slider--item--text slider__reveal">Ven a disfrutar con amigos y familia</p>
+          <a href="#" class="hero__btn btn__primary slider__reveal">
+            <span class="text text-1">ver menu</span>
+            <span class="text text-2" aria-hidden="true">ver menu</span>
+          </a>
+        </li>
+        <!-- slider 3 -->
+        <li class="hero__slider--item active" data-hero-slider-item>
+          <div class="slider-bg">
+            <img class="slider-bg-img" src="images/hero-slider-3.jpg" alt="" width="1880" height="950">
+          </div>
+          <p class="label-2 hero__slider--item--subtitle slider__reveal">Sabores inolvidables</p>
+          <h1 class="display-1 hero__slider--item--title slider__reveal">cada uno se siente diferente</h1>
+          <p class="body-2 hero__slider--item--text slider__reveal">Ven a disfrutar con amigos y familia</p>
+          <a href="#" class="hero__btn btn__primary slider__reveal">
+            <span class="text text-1">ver menu</span>
+            <span class="text text-2" aria-hidden="true">ver menu</span>
+          </a>
+        </li>
+      </ul>
+      <button class="hero__slider--btn--prev" aria-label="anterior" data-prev-btn=""><ion-icon name="chevron-back-outline"></ion-icon></button>
+      <button class="hero__slider--btn--prev" aria-label="siguiente" data-next-btn=""><ion-icon name="chevron-forward-outline"></ion-icon></button>
+      <a href="" class="hero__slider--btn has-after">
+        <img src="images/hero-icon.png" width="48" height="48" alt="reservar Mesa icono">
+        <span class="label-2 text_center span">Reservar mesa</span>
+      </a>
+    </section>
+  </main>
 
 
   <script src="js/main.js"></script>
