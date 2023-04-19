@@ -133,10 +133,29 @@
     right: 15px;
     z-index: 2;
     background-color: $gold-crayola;
-    width: 110px;
-    height: 110px;
+    width: 210px;
+    height: 130px;
     padding: 12px;
     transform: scale(0.6);
+
+    &::after{
+      inset: 0;
+      border: 1px solid $gold-crayola;
+      animation: rotate360 15seg linear infinite;
+    }
+
+    &--img{
+      margin-inline: auto;
+      margin-block-end: 6px;
+    }
+
+    & .span{
+      color: $black;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      line-height: 1em;
+    }
   }
 }
 
@@ -161,3 +180,37 @@
   100% {transform: scale(1.15);}
 }
 
+.has-before,
+.has-after{
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after{
+  content: "";
+  position: absolute;
+}
+
+.slider__reveal{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.hero{
+  &__slider--item.active{
+    & .slider__reveal{
+      animation: slideReveal 1s ease forwards;
+    }
+  }
+}
+
+@keyframes slideReveal {
+  0%{transform: translateY(30px); opacity: 0;}
+  100%{transform: translateY(0); opacity: 1;}
+}
+
+.hero .hero__slider--item.active .hero__slider--item--subtitle{animation-delay: 500ms;}
+.hero .hero__slider--item.active .hero__slider--item--title{animation-delay: 1000ms;}
+.hero .hero__slider--item.active .hero__slider--item--text{animation-delay: 1.5s;}
+.hero .hero__slider--item.active .hero__btn{animation-delay: 2s;}
