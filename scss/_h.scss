@@ -39,7 +39,7 @@ body.navActive { overflow: hidden;}
   }
 
   &__text{
-    background-image: $loading-text-gradient;
+    background: $loading-text-gradient;
     background-size: 500%;
     font-size: calc(2rem + 3vw);
     font-weight: 700;

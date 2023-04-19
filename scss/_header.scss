@@ -1,0 +1,181 @@
+.nav__list--link--icon{
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1px solid $gold-crayola;
+  transform: rotate(45deg);
+}
+.hover__underline::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-block: 1px solid $gold-crayola;
+  transform: scaleX(0.2);
+  transition: 500ms ease;
+}
+.hover__underline:is(:hover, :focus-visible)::after{
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+// .header .btn{
+//   display: none;
+// }
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding-block: 40px;
+  z-index: 2;
+  border-block-end: 1px solid transparent;
+  transition: 250ms ease;
+
+  &__container{
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.header.active{
+  padding-block: 20px;
+  background-color: $eerie-black-4;
+  border-color: $black-alpha-15;
+}
+
+.header.hide{
+  transform: translateY(-100%);
+  transition-delay: 250ms;
+}
+
+.nav__openButton{
+  padding: 12px;
+  padding-inline-end: 0;
+}
+.nav__openButton .line{
+  width: 30px;
+  height: 2px;
+  background-color: $white;
+  margin-block: 4px;
+  transform-origin: left;
+  animation: menuBtn 400ms ease-in-out alternate infinite;
+  color: $white;
+}
+@keyframes menuBtn {
+  0%{
+    transform: scaleX(1);
+  }
+  100%{ transform: scaleX(0.5);}
+}
+.nav__openButton .line-2{animation-delay: 150ms;}
+.nav__openButton .line-3{animation-delay: 300ms;}
+
+.nav{
+  position: fixed;
+  background-color: $smoky-black-1;
+  top: 0;
+  left: -360px;
+  bottom: 0;
+  max-width: 360px;
+  width: 100%;
+  padding-inline: 30px;
+  padding-block-end: 50px;
+  overflow-y: auto;
+  visibility: hidden;
+  z-index: 1;
+  transition: 500ms ease;
+
+  &__list{
+    border-block-end: 1px solid $white-alpha-20;
+    margin-block-end: 100px;
+
+    &--item{
+      border-block-start: 1px solid $white-alpha-20;
+    }
+    &--link{
+      position: relative;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding-block: 10px;
+      max-width: unset;
+
+      &::after{
+        display: none;
+      }
+
+      &--text{
+        transition: 250ms ease;
+      }
+
+    }
+  }
+}
+
+.nav.active{
+  visibility: visible;
+  transform: translateX(360px);
+}
+
+.nav .closeButton{
+  color: $white;
+  border: 1px solid currentColor;
+  padding: 4px;
+  border-radius: 50%;
+  margin-inline-start: auto;
+  margin-block: 30px 20px;
+}
+
+.nav .closeButton ion-icon{
+  --ionicon-stroke-width: 40px;
+}
+.nav .closeButton:is(:hover, :focus-visible){
+  color: $gold-crayola;
+}
+
+.nav .logo{
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 60px;
+}
+.nav__list--link:is(:hover, :focus-visible, .active) .nav__list--link--text{
+  color: $gold-crayola;
+  transform: translateX(20px);
+}
+.nav__list--link .nav__list--link--icon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0;
+  transition: 250ms ease;
+}
+
+.nav__list--link:is(:hover, :focus-visible, .active) .nav__list--link--icon{
+  opacity: 1;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $black-alpha-80;
+  opacity: 0;
+  pointer-events: none;
+  transition: 500ms ease;
+  z-index: 0;
+}
+
+.overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
