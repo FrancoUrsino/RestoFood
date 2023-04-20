@@ -20,7 +20,7 @@
 }
 
 .service__container--title {
-  font-family: $oldStan;
+  font-family: $zeyada;
   text-transform: uppercase;
   letter-spacing: 0.1px;
   line-height: 35px;
@@ -61,4 +61,32 @@
 .hover\:shine:is(:hover, :focus-within)::after{
   transform: skewX(-0.08turn) translateX(275%);
   transition: 1000ms ease;
+}
+
+.img__holder{
+  aspect-ratio: 285px 336px;
+  overflow: hidden;
+  background-color: $eerie-black-4;
+}
+
+.btn__text{
+  color: $gold-crayola;
+  padding-block-end: 4px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  transition: 250ms ease;
+  padding: 10px 0;
+
+  &:is(:hover, :focus-visible){
+    color: $white;
+  }
+}
+
+.card__title a{
+  font-family: $zeyada;
+  text-transform: uppercase;
+  margin: 15px;
+  letter-spacing: 0.1px;
 }

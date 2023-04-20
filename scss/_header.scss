@@ -5,6 +5,11 @@
   border: 1px solid $gold-crayola;
   transform: rotate(45deg);
 }
+
+.hover__underline{
+  position: relative;
+  max-width: max-content;
+}
 .hover__underline::after{
   content: "";
   position: absolute;

@@ -164,6 +164,11 @@ body.navActive {
   transform: rotate(45deg);
 }
 
+.hover__underline {
+  position: relative;
+  max-width: max-content;
+}
+
 .hover__underline::after {
   content: "";
   position: absolute;
@@ -599,7 +604,7 @@ body.navActive {
 }
 
 .service__container--title {
-  font-family: "Old Standard TT", serif;
+  font-family: "Zeyada", cursive;
   text-transform: uppercase;
   letter-spacing: 0.1px;
   line-height: 35px;
@@ -639,6 +644,33 @@ body.navActive {
 .hover\:shine:is(:hover, :focus-within)::after {
   transform: skewX(-0.08turn) translateX(275%);
   transition: 1000ms ease;
+}
+
+.img__holder {
+  aspect-ratio: 285px 336px;
+  overflow: hidden;
+  background-color: rgb(33, 33, 33);
+}
+
+.btn__text {
+  color: rgb(228, 197, 144);
+  padding-block-end: 4px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  transition: 250ms ease;
+  padding: 10px 0;
+}
+.btn__text:is(:hover, :focus-visible) {
+  color: rgb(255, 255, 255);
+}
+
+.card__title a {
+  font-family: "Zeyada", cursive;
+  text-transform: uppercase;
+  margin: 15px;
+  letter-spacing: 0.1px;
 }
 
 /*# sourceMappingURL=style.css.map */
