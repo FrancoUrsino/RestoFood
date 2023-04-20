@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +11,23 @@
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap"
+    rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="images/hero-slider-1.jpg">
   <link rel="preload" href="images/hero-slider-2.jpg">
   <link rel="preload" href="images/hero-slider-3.jpg">
 </head>
+
 <body>
   <!-- PRELOAD-->
   <div class="preload" data-preload>
     <div class="preload__circle"></div>
     <p class="preload__text">Grilli</p>
   </div>
-  
+
   <!-- HEADER -->
   <header class="header" data-header>
     <div class="header__container">
@@ -36,19 +40,20 @@
         <a href="#" class="logo"><img src="images/logo.svg" alt="Grilli logo" width="160" height="50"></a>
         <ul class="nav__list">
           <li class="nav__list--item"><a href="#home" class="nav__list--link hover__underline active">
-            <div class="nav__list--link--icon"></div><span class="nav__list--link--text">inicio</span>
-          </a></li>
+              <div class="nav__list--link--icon"></div><span class="nav__list--link--text">inicio</span>
+            </a></li>
           <li class="nav__list--item"><a href="#home" class="nav__list--link hover__underline ">
-            <div class="nav__list--link--icon"></div><span class="nav__list--link--text">menu</span>
-          </a></li>
+              <div class="nav__list--link--icon"></div><span class="nav__list--link--text">menu</span>
+            </a></li>
           <li class="nav__list--item"><a href="#home" class="nav__list--link hover__underline ">
-            <div class="nav__list--link--icon"></div><span class="nav__list--link--text">acerca de</span>
-          </a></li>
+              <div class="nav__list--link--icon"></div><span class="nav__list--link--text">acerca de</span>
+            </a></li>
           <li class="nav__list--item"><a href="#home" class="nav__list--link hover__underline ">
-            <div class="nav__list--link--icon"></div><span class="nav__list--link--text">chefs</span>
-          </a></li>
+              <div class="nav__list--link--icon"></div><span class="nav__list--link--text">chefs</span>
+            </a></li>
           <li class="nav__list--item"><a href="#home" class="nav__list--link hover__underline ">
-            <div class="nav__list--link--icon"></div><span class="nav__list--link--text">contactanos</span></a></li>
+              <div class="nav__list--link--icon"></div><span class="nav__list--link--text">contactanos</span>
+            </a></li>
         </ul>
       </nav>
       <a href="#" class="btn btn__secondary">
@@ -65,12 +70,13 @@
   </header>
   <!-- MAIN -->
   <main class="main">
+    <!-- HERO SECTION -->
     <section class="hero text_center" aria-label="home" id="home">
       <ul class="hero__slider" data-hero-slider>
         <!-- slider 1 -->
         <li class="hero__slider--item active" data-hero-slider-item>
           <div class="slider-bg">
-            <img class="slider-bg-img" src="images/hero-slider-1.jpg" width="1880" height="950" alt="">
+            <img class="slider-bg-img" src="images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img__cover">
           </div>
           <p class="label-2 hero__slider--item--subtitle slider__reveal">Comída Tradicional</p>
           <h1 class="display-1 hero__slider--item--title slider__reveal">Por el amor a la cocina</h1>
@@ -83,7 +89,7 @@
         <!-- slider 2 -->
         <li class="hero__slider--item active" data-hero-slider-item>
           <div class="slider-bg">
-            <img class="slider-bg-img" src="images/hero-slider-2.jpg" alt="" width="1880" height="950">
+            <img class="slider-bg-img" src="images/hero-slider-2.jpg" alt="" width="1880" height="950" class="img__cover">
           </div>
           <p class="label-2 hero__slider--item--subtitle slider__reveal">Experiencias unicas</p>
           <h1 class="display-1 hero__slider--item--title slider__reveal">Historia para contar</h1>
@@ -96,7 +102,7 @@
         <!-- slider 3 -->
         <li class="hero__slider--item active" data-hero-slider-item>
           <div class="slider-bg">
-            <img class="slider-bg-img" src="images/hero-slider-3.jpg" alt="" width="1880" height="950">
+            <img class="slider-bg-img" src="images/hero-slider-3.jpg" alt="" width="1880" height="950" class="img__cover">
           </div>
           <p class="label-2 hero__slider--item--subtitle slider__reveal">Sabores inolvidables</p>
           <h1 class="display-1 hero__slider--item--title slider__reveal">cada uno se siente diferente</h1>
@@ -107,12 +113,71 @@
           </a>
         </li>
       </ul>
-      <button class="hero__slider--btn--prev" aria-label="anterior" data-prev-btn=""><ion-icon name="chevron-back-outline"></ion-icon></button>
-      <button class="hero__slider--btn--prev" aria-label="siguiente" data-next-btn=""><ion-icon name="chevron-forward-outline"></ion-icon></button>
+      <button class="hero__slider--btn--prev" aria-label="anterior" data-prev-btn=""><ion-icon
+          name="chevron-back-outline"></ion-icon></button>
+      <button class="hero__slider--btn--prev" aria-label="siguiente" data-next-btn=""><ion-icon
+          name="chevron-forward-outline"></ion-icon></button>
       <a href="" class="hero__slider--btn has-after">
-        <img src="images/hero-icon.png" width="48" height="48" alt="reservar Mesa icono" class="hero__slider--btn--img">
+        <img src="images/hero-icon.png" width="48" height="48" alt="reservar mesa" class="hero__slider--btn--img">
         <span class="label-2 text_center span">Reservar mesa</span>
       </a>
+    </section>
+    <!-- SERVICE SECTION -->
+    <section class="section service bg-black-10 text_center" aria-label="service">
+      <div class="service__container">
+        <p class="service__container--subtitle label-2">GUSTOS REALES</p>
+        <h2 class="headline-1 service__container--title">Con lo mejor del mercado</h2>
+
+        <p class="service__container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tenetur sapiente quia modi earum, corrupti eum quibusdam minima ipsam minus assumenda dolor sunt odio quos.</p>
+
+        <ul class="service__container--list grid-list">
+          <!-- CARD 1 -->
+          <li class="service__container--list--card">
+            <a href="" class="has-before hover:shine">
+              <figure class="card__banner img__holder" style="--width:285; --height:336;">
+                <img src="images/service-1.jpg" alt="Desayuno" width="285" height="336" class="img__cover slider-bg-img" loading="lazy">
+              </figure>
+            </a>
+            <div class="card__content">
+              <h3 class="title-4 card__title">
+                <a href="#">Desayunos</a>
+              </h3>
+              <a href="" class="btn__text hover__underline label-2">ver menu</a>
+            </div>
+          </li>
+          <!-- CARD 2 -->
+          <li class="service__container--list--card">
+            <a href="" class="has-before hover:shine">
+              <figure class="card__banner img__holder" style="--width:285; --height:336;">
+                <img src="images/service-2.jpg" alt="Almuerzo" width="285" height="336" class="img__cover slider-bg-img" loading="lazy">
+              </figure>
+            </a>
+            <div class="card__content">
+              <h3 class="title-4 card__title">
+                <a href="#">almuerzos</a>
+              </h3>
+              <a href="" class="btn__text hover__underline label-2">ver menu</a>
+            </div>
+          </li>
+          <!-- CARD 3 -->
+          <li class="service__container--list--card">
+            <a href="" class="has-before hover:shine">
+              <figure class="card__banner img__holder" style="--width:285; --height:336;">
+                <img src="images/service-3.jpg" alt="Tragos" width="285" height="336" class="img__cover slider-bg-img" loading="lazy">
+              </figure>
+            </a>
+            <div class="card__content">
+              <h3 class="title-4 card__title">
+                <a href="#">Tragos</a>
+              </h3>
+              <a href="" class="btn__text hover__underline label-2">ver menu</a>
+            </div>
+          </li>
+          
+        </ul>
+        <img src="images/shape-1.png" width="246" height="412" loading="lazy" alt="img bg-black-10" class="shape shape-1 move-anim">
+        <img src="images/shape-2.png" width="343" height="345" loading="lazy" alt="img bg-black-10" class="shape shape-2 move-anim">
+      </div>
     </section>
   </main>
 
@@ -121,4 +186,5 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

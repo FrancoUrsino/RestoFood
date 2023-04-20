@@ -1,0 +1,64 @@
+.service{
+  padding-inline: 16px;
+}
+
+.service__container--subtitle {
+  position: relative;
+  color: $gold-crayola;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  margin-block-end: 12px;
+
+  &::after {
+    content: url(../images/separator.svg);
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+    margin-block-start: 5px;
+  }
+}
+
+.service__container--title {
+  font-family: $oldStan;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+.section{
+  position: relative;
+  padding-block: 70px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-black-10{
+  background-color: $smoky-black-2;
+}
+
+.grid-list{
+  display: grid;
+  gap: 40px;
+}
+
+.hover\:shine{
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+    transform: skewX(-0.08turn) translateX(-180%);
+  }
+}
+
+.hover\:shine:is(:hover, :focus-within)::after{
+  transform: skewX(-0.08turn) translateX(275%);
+  transition: 1000ms ease;
+}

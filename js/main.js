@@ -35,11 +35,11 @@ addEventOnElements(navTogglers, "click", togglerNav)
 // HEADER FUNCTIONS
 
 let lastScroll = 0;
-const hideHeader = function (){
+const hideHeader = function () {
   const isScrollBtn = lastScroll < window.scrollY;
-  if (isScrollBtn){
+  if (isScrollBtn) {
     header.classList.add("hide");
-  } else{
+  } else {
     header.classList.remove("hide")
   }
 
@@ -47,12 +47,12 @@ const hideHeader = function (){
   hideHeader();
 }
 
-window.addEventListener("scroll", function (){
-if (window.scrollY >= 50){
-  header.classList.add("active");
-} else{
-  header.classList.remove("active");
-}
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 50) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
 })
 
 // SLIDER FUNCTIONS
@@ -60,14 +60,14 @@ if (window.scrollY >= 50){
 let currentSlidePos = 0;
 let lastActiveSliderItem = heroSliderItems[0];
 
-const updateSliderPos = function (){
+const updateSliderPos = function () {
   lastActiveSliderItem.classList.remove("active");
   heroSliderItems[currentSlidePos].classList.add("active");
   lastActiveSliderItem = heroSliderItems[currentSlidePos];
 }
 
-const slideNext = function (){
-  if (currentSlidePos >= heroSliderItems.length -1){
+const slideNext = function () {
+  if (currentSlidePos >= heroSliderItems.length - 1) {
     currentSlidePos = 0;
   } else {
     currentSlidePos++;
@@ -76,9 +76,9 @@ const slideNext = function (){
 }
 nextBtn.addEventListener("click", slideNext);
 
-const slidePrev = function (){
-  if (currentSlidePos <= 0){
-    currentSlidePos = heroSliderItems.length -1;
+const slidePrev = function () {
+  if (currentSlidePos <= 0) {
+    currentSlidePos = heroSliderItems.length - 1;
   } else {
     currentSlidePos--;
   }
@@ -87,16 +87,16 @@ const slidePrev = function (){
 prevBtn.addEventListener("click", slidePrev);
 
 let autoSlideItems;
-const autoSlide = function(){
-  autoSlideItems = setInterval(function(){
+const autoSlide = function () {
+  autoSlideItems = setInterval(function () {
     slideNext();
-  }, 7000);
+  }, 6000);
 }
 
-addEventOnElements([nextBtn, prevBtn], "mouseover", function(){
+addEventOnElements([nextBtn, prevBtn], "mouseover", function () {
   clearInterval(autoSlideItems);
 });
 
-addEventOnElements([nextBtn, prevBtn],"mouseout", autoSlide);
+addEventOnElements([nextBtn, prevBtn], "mouseout", autoSlide);
 
 window.addEventListener("load", autoSlide);
