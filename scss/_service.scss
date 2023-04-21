@@ -19,6 +19,51 @@
   }
 }
 
+.service__container--text{
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.service__container--list--card{
+  overflow: hidden;
+  margin: 20px 0 30px;
+
+  & .has-before{
+    padding-block: 30px;
+    margin-block-end: 26px;
+    z-index: 1;
+
+    &::before{
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 100%;
+      background-image: url(../images/img-pattern.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: repeat;
+      transition: 500ms ease;
+      transition-delay: 0;
+      z-index: -1;
+      will-change: transform;
+    }
+  }
+
+  .card__banner{
+    transition: 500ms ease;
+  }
+}
+
+.service__container--list--card:is(:hover, :focus-visible) .has-before::before{
+  transform: rotateY(0.5turn) translateX(50%);
+  transition-delay: 350ms;
+}
+
+.service__container--list--card:is(:hover, :focus-visible) .card__banner{
+  transform: scale(1.05);
+}
+
 .service__container--title {
   font-family: $zeyada;
   text-transform: uppercase;

@@ -147,16 +147,10 @@
     right: 15px;
     z-index: 2;
     background-color: $gold-crayola;
-    width: 210px;
+    width: 160px;
     height: 130px;
     padding: 12px;
     transform: scale(0.6);
-
-    &::after {
-      inset: 0;
-      border: 1px solid $smoky-black-1;
-      animation: rotate360 15seg linear infinite;
-    }
 
     &--img {
       margin-inline: auto;
@@ -167,10 +161,16 @@
       color: $smoky-black-1;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.1px;
       line-height: 1em;
     }
   }
+}
+
+.hero__slider--btn::after {
+  inset: 0;
+  border: 1px solid $gold-crayola;
+  animation: rotate360 15seg linear infinite;
 }
 
 .hero .slider-bg {
