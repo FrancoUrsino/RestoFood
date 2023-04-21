@@ -1,7 +1,7 @@
 .about {
   &__container {
     display: grid;
-    gap: 60px;
+    gap: 30px;
 
     &--title {
       font-family: $zeyada;
@@ -90,4 +90,37 @@
 
 .w-100{
   width: 100%;
+}
+
+.contact__number{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  width: 100%;
+  color: $gold-crayola;
+  max-width: max-content;
+  margin-inline: auto;
+  justify-content: center;
+
+  & ion-icon{
+    padding-right: 5px;
+    position: relative;
+    top: 3px;
+
+    &:hover{
+      animation: shake 500ms linear infinite;
+    }
+  }
+}
+
+@keyframes shake {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
 }
