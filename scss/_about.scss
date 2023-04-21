@@ -1,0 +1,93 @@
+.about {
+  &__container {
+    display: grid;
+    gap: 60px;
+
+    &--title {
+      font-family: $zeyada;
+      text-transform: uppercase;
+      letter-spacing: 0.1px;
+      line-height: 35px;
+      font-weight: 400;
+      padding-top: 15px;
+    }
+
+    &--subtitle {
+      position: relative;
+      color: $gold-crayola;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .4em;
+      margin-block-end: 12px;
+
+      &::after {
+        content: url(../images/separator.svg);
+        display: block;
+        width: 100px;
+        margin-inline: auto;
+        margin-block-start: 5px;
+      }
+    }
+
+    &--text {
+      margin: 10px 0;
+      padding: 15px;
+      font-weight: 400;
+    }
+
+    &--banner{
+      position: relative;
+      margin-block-end: 120px;
+
+      & > .w-100{
+        padding-inline-start: 50px;
+      }
+    }
+
+    &--img{
+      position: absolute;
+
+      ::before{
+        z-index: -1;
+      }
+    }
+  }
+
+  & .abs-img-1{
+    bottom: 80px;
+    left: 0;
+    width: 230px;
+    padding-block: 70px;
+    padding-left: 10px;
+
+    &::before{
+      top: 35px;
+      bottom: 0;
+      left: 60%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 300px;
+      background-image: url(../images/img-pattern.svg);
+      background-repeat: repeat;
+      z-index: -2;
+    }
+  }
+
+  & .abs-img-2{
+    top: -40px;
+    right: 10px;
+    overflow: hidden;
+
+    &::before{
+      inset: 0;
+      background-image: url(../images/badge-2-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      animation: rotate360 15s linear infinite;
+    }
+  }
+}
+
+.w-100{
+  width: 100%;
+}
